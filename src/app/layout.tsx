@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-
-// const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "SVGER ✨",
-  description: "Generate svgs for your web apps. (Dividers, Backgrounds and more) ",
+  description: "Generate unique SVGs, (Dividers, Backgrounds and more) ",
 };
 
 export default function RootLayout({
@@ -22,6 +21,7 @@ export default function RootLayout({
       </Head>
       <body className={``}>
         {children}
+        <Analytics/>
       </body>
     </html>
   );
